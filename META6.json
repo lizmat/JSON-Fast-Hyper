@@ -1,0 +1,27 @@
+{
+  "auth": "zef:lizmat",
+  "authors": [
+    "Elizabeth Mattijsen"
+  ],
+  "build-depends": [
+  ],
+  "depends": [
+    "JSON::Fast:ver<0.16>"
+  ],
+  "description": "Read/Write hyperable JSON",
+  "license": "Artistic-2.0",
+  "name": "JSON::Fast::Hyper",
+  "perl": "6.d",
+  "provides": {
+    "JSON::Fast::Hyper": "lib/JSON/Fast/Hyper.rakumod"
+  },
+  "resources": [
+  ],
+  "source-url": "https://github.com/lizmat/JSON-Fast-Hyper.git",
+  "tags": [
+    "JSON"
+  ],
+  "test-depends": [
+  ],
+  "version": "0.0.1"
+}

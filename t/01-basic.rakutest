@@ -1,0 +1,21 @@
+use Test;
+use JSON::Fast::Hyper;
+
+plan 4;
+
+my @array = <a b c>;
+my %hash  = :42a, :666b, :137c;
+my @list is List = 1, 2, 3, @array, %hash;
+
+is-deeply from-json(to-json(@array)), @array.List, 'is array ok';
+is-deeply from-json(to-json(%hash)), %hash,        'is hash ok';
+is-deeply from-json(to-json(@list)), @list,        'is list ok';
+
+is to-json(@array), '[
+
+"a",
+"b",
+"c" 
+]', 'is to-json of array ok';
+
+# vim: expandtab shiftwidth=4
