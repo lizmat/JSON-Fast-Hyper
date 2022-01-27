@@ -2,5 +2,8 @@ Revision history for JSON-Fast-Hyper
 
 {{$NEXT}}
 
+0.0.2  2022-01-27T13:13:27+01:00
+    - Added a "TECHNICAL BACKGROUND" section to the documentation
+
 0.0.1  2022-01-26T20:36:55+01:00
     - Initial version

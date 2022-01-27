@@ -83,6 +83,28 @@ When the JSON was created hyperable, then reading such JSON with C<from-json>
 will return the original C<Positional> as a C<List>.  If the JSON was not
 hyperable, it will call the normal C<from-json> sub from C<JSON::Fast>.
 
+=head1 TECHNICAL BACKGROUND
+
+This module makes the C<to-json> and C<from-json> exported subs of
+C<JSON::Fast> into a multi.  It adds a candidate taking a C<Positional>
+to C<to-json>, and it adds a candidate to C<from-json> that takes the
+specially formatted string created by that extra C<to-json> candidate.
+
+The C<Positional> candidate of C<to-json> will create the JSON for each
+of the elements separately, and joins them together with an additional
+newline.  And then adds a specially formatted header and footer to the
+result.  The resulting string is still valid JSON, readable by any
+JSON decoder.  But when run through the C<from-json> sub provided by this
+module, will decode elements in parallel.  Wallclock times are at about
+50% for a 7MB JSON file, such as provided by the Raku Ecosystem Archive.
+While only adding C<3 + number of elements> bytes to the resulting string.
+
+A similar approach could be done for handling an C<Associative> at the
+top level.  But this makes generally a lot less sense, as the amount of
+information per key/value is usually vastly different, and JSON that
+consists of an C<Associative> at the top, are usually not big enough to
+warrant the overhead of hypering.
+
 =head1 AUTHOR
 
 Elizabeth Mattijsen <liz@raku.rocks>
