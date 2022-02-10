@@ -2,6 +2,9 @@ Revision history for JSON-Fast-Hyper
 
 {{$NEXT}}
 
+0.0.3  2022-02-10T20:08:48+01:00
+    - Upped dependency on JSON::Fast
+
 0.0.2  2022-01-27T13:13:27+01:00
     - Added a "TECHNICAL BACKGROUND" section to the documentation
 

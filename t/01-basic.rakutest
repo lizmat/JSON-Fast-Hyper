@@ -1,7 +1,7 @@
 use Test;
 use JSON::Fast::Hyper;
 
-plan 4;
+plan 5;
 
 my @array = <a b c>;
 my %hash  = :42a, :666b, :137c;
@@ -17,5 +17,7 @@ is to-json(@array), '[
 "b",
 "c" 
 ]', 'is to-json of array ok';
+
+is-deeply from-json(to-json(%hash), :immutable), %hash.Map, 'is immutable ok';
 
 # vim: expandtab shiftwidth=4

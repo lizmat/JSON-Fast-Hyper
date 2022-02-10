@@ -6,7 +6,7 @@
   "build-depends": [
   ],
   "depends": [
-    "JSON::Fast:ver<0.16>"
+    "JSON::Fast:ver<0.17>:auth<cpan:TIMOTIMO>"
   ],
   "description": "Read/Write hyperable JSON",
   "license": "Artistic-2.0",
@@ -19,9 +19,10 @@
   ],
   "source-url": "https://github.com/lizmat/JSON-Fast-Hyper.git",
   "tags": [
-    "JSON"
+    "JSON",
+    "HYPER"
   ],
   "test-depends": [
   ],
-  "version": "0.0.2"
+  "version": "0.0.3"
 }
