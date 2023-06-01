@@ -64,7 +64,7 @@ Source can be located at: https://github.com/lizmat/JSON-Fast-Hyper . Comments a
 COPYRIGHT AND LICENSE
 =====================
 
-Copyright 2022 Elizabeth Mattijsen
+Copyright 2022, 2023 Elizabeth Mattijsen
 
 This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
 
