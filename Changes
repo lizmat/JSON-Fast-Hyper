@@ -1,6 +1,8 @@
 Revision history for JSON-Fast-Hyper
 
 {{$NEXT}}
+
+0.0.6  2024-07-29T15:23:37+02:00
     - Update copyright year
     - Add separate CI badges for each OS
     - Add sponsor link and button
