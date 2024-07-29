@@ -1,4 +1,4 @@
-[![Actions Status](https://github.com/lizmat/JSON-Fast-Hyper/workflows/test/badge.svg)](https://github.com/lizmat/JSON-Fast-Hyper/actions)
+[![Actions Status](https://github.com/lizmat/JSON-Fast-Hyper/actions/workflows/linux.yml/badge.svg)](https://github.com/lizmat/JSON-Fast-Hyper/actions) [![Actions Status](https://github.com/lizmat/JSON-Fast-Hyper/actions/workflows/macos.yml/badge.svg)](https://github.com/lizmat/JSON-Fast-Hyper/actions) [![Actions Status](https://github.com/lizmat/JSON-Fast-Hyper/actions/workflows/windows.yml/badge.svg)](https://github.com/lizmat/JSON-Fast-Hyper/actions)
 
 NAME
 ====
@@ -61,10 +61,12 @@ Elizabeth Mattijsen <liz@raku.rocks>
 
 Source can be located at: https://github.com/lizmat/JSON-Fast-Hyper . Comments and Pull Requests are welcome.
 
+If you like this module, or what I’m doing more generally, committing to a [small sponsorship](https://github.com/sponsors/lizmat/) would mean a great deal to me!
+
 COPYRIGHT AND LICENSE
 =====================
 
-Copyright 2022, 2023 Elizabeth Mattijsen
+Copyright 2022, 2023, 2024 Elizabeth Mattijsen
 
 This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
 
