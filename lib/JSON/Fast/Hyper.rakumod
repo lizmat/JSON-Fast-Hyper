@@ -16,7 +16,7 @@ BEGIN &to-json-hyper.add_dispatchee(&to-json);
 my proto sub from-json-hyper(|) {*}
 my multi sub from-json-hyper(Hyperable:D $json) {
     (my $data := $json.substr(3,*-2))
-      ?? $data.lines.&hyperize.map({from-json .chop}).List
+      ?? $data.lines.&hyperize(128).map({from-json .chop}).List
       !! ()
 }
 BEGIN &from-json-hyper.add_dispatchee(&from-json);
@@ -97,8 +97,9 @@ newline.  And then adds a specially formatted header and footer to the
 result.  The resulting string is still valid JSON, readable by any
 JSON decoder.  But when run through the C<from-json> sub provided by this
 module, will decode elements in parallel.  Wallclock times are at about
-50% for a 7MB JSON file, such as provided by the Raku Ecosystem Archive.
-While only adding C<3 + number of elements> bytes to the resulting string.
+45% (aka 2.2x as fast) for a 13MB JSON file, such as provided by the Raku
+Ecosystem Archive.  While only adding C<3 + number of elements> bytes to
+the resulting string.
 
 A similar approach could be done for handling an C<Associative> at the
 top level.  But this makes generally a lot less sense, as the amount of

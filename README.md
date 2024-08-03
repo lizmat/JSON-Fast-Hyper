@@ -50,7 +50,7 @@ TECHNICAL BACKGROUND
 
 This module makes the `to-json` and `from-json` exported subs of `JSON::Fast` into a multi. It adds a candidate taking a `Positional` to `to-json`, and it adds a candidate to `from-json` that takes the specially formatted string created by that extra `to-json` candidate.
 
-The `Positional` candidate of `to-json` will create the JSON for each of the elements separately, and joins them together with an additional newline. And then adds a specially formatted header and footer to the result. The resulting string is still valid JSON, readable by any JSON decoder. But when run through the `from-json` sub provided by this module, will decode elements in parallel. Wallclock times are at about 50% for a 7MB JSON file, such as provided by the Raku Ecosystem Archive. While only adding `3 + number of elements` bytes to the resulting string.
+The `Positional` candidate of `to-json` will create the JSON for each of the elements separately, and joins them together with an additional newline. And then adds a specially formatted header and footer to the result. The resulting string is still valid JSON, readable by any JSON decoder. But when run through the `from-json` sub provided by this module, will decode elements in parallel. Wallclock times are at about 45% (aka 2.2x as fast) for a 13MB JSON file, such as provided by the Raku Ecosystem Archive. While only adding `3 + number of elements` bytes to the resulting string.
 
 A similar approach could be done for handling an `Associative` at the top level. But this makes generally a lot less sense, as the amount of information per key/value is usually vastly different, and JSON that consists of an `Associative` at the top, are usually not big enough to warrant the overhead of hypering.
 
