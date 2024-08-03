@@ -3,6 +3,7 @@ my constant $footer = " \n]";  # extra space intentional so from-json can chop
 my subset Hyperable of Str where .starts-with($header) && .ends-with($footer);
 
 use JSON::Fast:ver<0.19>:auth<cpan:TIMOTIMO>;
+use ParaSeq:ver<0.2.5>:auth<zef:lizmat>;
 
 my proto sub to-json-hyper(|) {*}
 my multi sub to-json-hyper(@_, *%_) {
@@ -15,7 +16,7 @@ BEGIN &to-json-hyper.add_dispatchee(&to-json);
 my proto sub from-json-hyper(|) {*}
 my multi sub from-json-hyper(Hyperable:D $json) {
     (my $data := $json.substr(3,*-2))
-      ?? $data.lines.hyper.map({from-json .chop}).List
+      ?? $data.lines.&hyperize.map({from-json .chop}).List
       !! ()
 }
 BEGIN &from-json-hyper.add_dispatchee(&from-json);

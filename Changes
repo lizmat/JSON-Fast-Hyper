@@ -1,6 +1,9 @@
 Revision history for JSON-Fast-Hyper
 
 {{$NEXT}}
+    - Add dependency on ParaSeq
+    - Improve speed of hypered JSON by about 20% by using ParaSeq's
+      hyperize versus the standard .hyper functionality
 
 0.0.6  2024-07-29T15:23:37+02:00
     - Update copyright year
