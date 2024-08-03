@@ -66,8 +66,7 @@ my $json = to-json(@array);    # creates faster hyperable JSON
 When a list is converted to JSON, it will create a special hyperable version
 of JSON that is still completely valid JSON for all JSON parsers, but which
 can be interpreted in parallel when reading back.  To allow this feature,
-the JSON will always be created as if the C<:pretty> named argument has been
-specified as C<False>.
+the JSON will be created ignoring the C<:pretty> named argument.
 
 If your data structure is B<not> a C<Positional>, then it will just act as
 the normal C<to-json> sub from C<JSON::Fast>.
