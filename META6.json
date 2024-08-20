@@ -7,7 +7,7 @@
   ],
   "depends": [
     "JSON::Fast:ver<0.19>:auth<cpan:TIMOTIMO>",
-    "ParaSeq:ver<0.2.5>:auth<zef:lizmat>"
+    "ParaSeq:ver<0.2.6+>:auth<zef:lizmat>"
   ],
   "description": "Read/Write hyperable JSON",
   "license": "Artistic-2.0",
@@ -25,5 +25,5 @@
   ],
   "test-depends": [
   ],
-  "version": "0.0.7"
+  "version": "0.0.8"
 }
