@@ -1,3 +1,4 @@
 .precomp/
 /JSON-Fast-Hyper-*
 /releases/
+*.rakucov
