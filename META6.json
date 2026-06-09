@@ -3,6 +3,8 @@
   "authors": [
     "Elizabeth Mattijsen"
   ],
+  "build-depends": [
+  ],
   "depends": {
     "runtime": {
       "requires": [
@@ -18,6 +20,9 @@
     "JSON::Fast::Hyper": "lib/JSON/Fast/Hyper.rakumod"
   },
   "raku": "6.d",
+  "resources": [
+  ],
+  "source-url": "https://github.com/lizmat/JSON-Fast-Hyper.git",
   "support": {
     "bugtracker": "https://github.com/lizmat/JSON-Fast-Hyper/issues",
     "email": "liz@raku.rocks",
@@ -27,5 +32,7 @@
     "JSON",
     "HYPER"
   ],
-  "version": "0.0.10"
+  "test-depends": [
+  ],
+  "version": "0.0.11"
 }
