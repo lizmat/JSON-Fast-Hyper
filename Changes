@@ -1,6 +1,9 @@
 Revision history for JSON-Fast-Hyper
 
 {{$NEXT}}
+    - Modernize META
+    - Up dependency on JSON::Fast
+    - Update copyright year
 
 0.0.10  2025-02-28T00:08:51+01:00
     - Replace dependency on ParaSeq by hyperize, until ParaSeq
