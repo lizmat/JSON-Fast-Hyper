@@ -2,7 +2,7 @@ my constant $header = "[\n\n";
 my constant $footer = " \n]";  # extra space intentional so from-json can chop
 my subset Hyperable of Str where .starts-with($header) && .ends-with($footer);
 
-use JSON::Fast:ver<0.20+>:auth<zef:timo>;
+use JSON::Fast:ver<0.21+>:auth<zef:timo>;
 use hyperize:ver<0.0.4+>:auth<zef:lizmat>;
 
 my proto sub to-json-hyper(|) {*}

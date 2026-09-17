@@ -8,7 +8,7 @@
   "depends": {
     "runtime": {
       "requires": [
-        "JSON::Fast:ver<0.20+>:auth<zef:timo>",
+        "JSON::Fast:ver<0.21+>:auth<zef:timo>",
         "hyperize:ver<0.0.4+>:auth<zef:lizmat>"
       ]
     }
@@ -22,11 +22,11 @@
   "raku": "6.d",
   "resources": [
   ],
-  "source-url": "https://github.com/lizmat/JSON-Fast-Hyper.git",
+  "source-url": "https://codeberg.org/lizmat/JSON-Fast-Hyper.git",
   "support": {
-    "bugtracker": "https://github.com/lizmat/JSON-Fast-Hyper/issues",
+    "bugtracker": "https://codeberg.org/lizmat/JSON-Fast-Hyper/issues",
     "email": "liz@raku.rocks",
-    "source": "https://github.com/lizmat/JSON-Fast-Hyper.git"
+    "source": "https://codeberg.org/lizmat/JSON-Fast-Hyper.git"
   },
   "tags": [
     "JSON",
