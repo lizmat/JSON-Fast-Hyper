@@ -1,6 +1,8 @@
 Revision history for JSON-Fast-Hyper
 
 {{$NEXT}}
+
+0.0.12  2026-09-17T18:28:43+02:00
     - Up depdendency on JSON::Fast for RakuAST
 
 0.0.11  2026-06-09T18:08:49+02:00
